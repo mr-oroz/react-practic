@@ -22,7 +22,7 @@ export class Sliders extends Component {
                     prev.index++
                 }
                 return {
-                    index: prev.index
+                    index: prev.index 
                 }
             })
         }, 1000)
@@ -33,11 +33,11 @@ export class Sliders extends Component {
             <>
                 <div className='slider'>
                     <div className='slider__football'>
-                        <img className='slider__img' src={this.state.images[this.state.index]} />
+                        <img className='slider__img' src={this.state.images[this.state.index]}/>
                         <div className='slider__inner'>
                             {
                                 this.state.images.map((images, index) => (
-                                    this.state.index === index ? null : <img className={this.state.index === index ? 'border' : ''} src={images} />
+                                    <img className={this.state.index === index ? 'border' : ''} src={images} />
                                 ))
                             }
                         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
+import Battery from './components/Battery';
 import Sliders from './components/sliders';
-import Time from './components/Time';
 import TrafficLight from './components/TrafficLight'
 
 
@@ -11,7 +11,6 @@ class App extends React.Component {
       time: 10,
       active: 2,
       show: true,
-      data: new Date(),
     }
     setInterval(() => {
       this.setState((prevState) => {
@@ -27,7 +26,6 @@ class App extends React.Component {
         return {
           time: prevState.time <= 0 ? 10 : prevState.time - 1,
           active: prevState.active,
-          data: prevState.data,
         }
       })
     }, 500);
@@ -37,8 +35,8 @@ class App extends React.Component {
       <>
         <TrafficLight time={this.state.time} active={this.state.active === 1} show={this.state.show}/>
         <TrafficLight time={this.state.time} active={this.state.active === 2} show={this.state.show}/>
-        <Time time={this.state.data}/>
         <Sliders/>
+        <Battery/>
       </>
     );
   }
