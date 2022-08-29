@@ -33,9 +33,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <TrafficLight time={this.state.time} active={this.state.active === 1} show={this.state.show}/>
-        <TrafficLight time={this.state.time} active={this.state.active === 2} show={this.state.show}/>
-        <Sliders/>
+        {/*<TrafficLight time={this.state.time} active={this.state.active === 1} show={this.state.show}/>*/}
+        {/*<TrafficLight time={this.state.time} active={this.state.active === 2} show={this.state.show}/>*/}
+        {/*<Sliders/>*/}
         <Battery/>
       </>
     );

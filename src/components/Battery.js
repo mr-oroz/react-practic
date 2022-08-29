@@ -6,11 +6,7 @@ class Battery extends Component {
         super(props)
         this.state = {
             index: 0,
-            color: [
-                'red',
-                'yellow',
-                'green',
-            ]
+
         }
         setInterval(() => {
             this.setState((prev) => {
@@ -26,12 +22,21 @@ class Battery extends Component {
         }, 1000)
     }
     render() {
+        const {index} = this.state;
+        let color = ''
+        if(index === 1) {
+            color = 'red'
+        } else if(index === 2) {
+            color = 'yellow'
+        } else if (index === 3) {
+            color = 'green'
+        }
         return (
             <div className={'battery'}>
                 <div className={'battery__content'}>
-                    {this.state.color.map((color, index) => {
-                        <div className={`battery__item  ${this.state.color[this.state.index]}`}></div>
-                    })}
+                    <div style={{background: color}} className={` ${index > 0? 'battery__item' : null}`}></div>
+                    <div style={{background: color}} className={`${index > 1? 'battery__item' : null}`}></div>
+                    <div style={{background: color}} className={`${index > 2? 'battery__item' : null}`}></div>
                 </div>
             </div>
         )
