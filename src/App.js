@@ -35,8 +35,8 @@ class App extends React.Component {
       <>
         {/*<TrafficLight time={this.state.time} active={this.state.active === 1} show={this.state.show}/>*/}
         {/*<TrafficLight time={this.state.time} active={this.state.active === 2} show={this.state.show}/>*/}
-        {/*<Sliders/>*/}
-        <Battery/>
+        <Sliders/>
+        {/* <Battery/> */}
       </>
     );
   }
